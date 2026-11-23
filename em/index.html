@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#111111">
+<meta name="description" content="Демонстрация блока планирования кулинарного мастер-класса для студии «ЕМ» в Перми.">
+<title>Мастер-класс для компании · студия «ЕМ»</title>
+<style>
+@font-face{font-family:Oswald;src:url('oswald-cyrillic.woff2') format('woff2');font-style:normal;font-weight:400 500;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Oswald;src:url('oswald-latin.woff2') format('woff2');font-style:normal;font-weight:400 500;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+@font-face{font-family:Jost;src:url('jost-cyrillic.woff2') format('woff2');font-style:normal;font-weight:400 700;font-display:swap;unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:Jost;src:url('jost-latin.woff2') format('woff2');font-style:normal;font-weight:400 700;font-display:swap;unicode-range:U+0000-00FF,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215}
+:root{color-scheme:light;--night:#111;--ink:#323232;--muted:#656166;--line:#d9d4db;--accent:#a12592;--gradient:linear-gradient(100deg,#a529a4,#c41665);--heading:Oswald,'Arial Narrow','Roboto Condensed',Arial,sans-serif}
+*,*::before,*::after{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:20px}body{margin:0;color:var(--ink);background:#fff;font:16px/1.53 Jost,'Century Gothic','Trebuchet MS',Arial,sans-serif}a{color:inherit}button,input,select{font:inherit}button{cursor:pointer}h1,h2,h3,p,dl,dd{margin:0}fieldset{border:0;margin:0;padding:0;min-width:0}a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible{outline:2px solid var(--accent);outline-offset:4px}[hidden]{display:none!important}
+.wrap{width:min(1200px,calc(100% - 80px));margin-inline:auto}.intro{background:var(--night);color:white}.site-context{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:17px 0;border-bottom:1px solid #883382}.wordmark{display:flex;gap:12px;align-items:center;text-decoration:none}.wordmark b{font:500 30px/.95 var(--heading);letter-spacing:-.04em;border-right:1px solid #8e3b83;padding-right:12px}.wordmark span,.site-context>a:last-child{font-size:14px}.site-context>a:last-child{text-underline-offset:4px;color:#eee}.hero{display:grid;grid-template-columns:1fr .96fr;align-items:stretch;gap:36px;padding:27px 0 34px}.hero-copy{align-self:center;padding:15px 0}.kicker{color:#eb8ddd;font-size:13px;font-weight:700;letter-spacing:.11em;text-transform:uppercase}.hero h1,.booking h2,.summary h3{font-family:var(--heading);font-weight:400;text-transform:uppercase;line-height:1.13}.hero h1{font-size:clamp(2.5rem,5.25vw,4.6rem);margin:10px 0 16px}.hero p:not(.kicker){color:#e4e0e5;max-width:39ch}.photo{margin:0;min-height:290px;position:relative;overflow:hidden;background:#272628}.photo img{position:absolute;width:100%;height:100%;object-fit:cover;object-position:center 49%;display:block}.photo figcaption{position:absolute;bottom:0;right:0;font-size:12px;color:#fff;background:#111c;padding:5px 10px}
+.booking{padding:42px 0 52px}.booking h2{font-size:clamp(2rem,4vw,3.2rem);margin-bottom:11px}.sub{color:var(--muted);max-width:62ch}.booking-grid{display:grid;grid-template-columns:1.22fr .78fr;gap:clamp(24px,6vw,86px);align-items:start;margin-top:27px}form{display:grid;gap:19px;min-width:0}.label,legend{display:block;font-weight:700;font-size:14px;margin-bottom:8px}.format-options,.pair{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.option{display:block;position:relative;cursor:pointer}.option input{position:absolute;inset:0;opacity:0;width:100%;height:100%;margin:0;cursor:pointer}.option span{height:100%;min-height:70px;display:grid;align-content:center;border:1px solid var(--line);border-radius:6px;padding:10px 13px}.option input:checked+span{border-color:var(--accent);background:#fcf1fb;box-shadow:inset 0 0 0 1px var(--accent)}.option input:focus-visible+span{outline:2px solid var(--accent);outline-offset:3px}.option small{color:var(--muted);font-size:13px}.field{width:100%;min-width:0;min-height:45px;padding:7px 4px;color:var(--ink);background:#fff;border:0;border-bottom:1px solid #565056;border-radius:0}.field:disabled{opacity:.42}.pair>div{min-width:0}.stepper{display:grid;grid-template-columns:41px minmax(0,1fr) 41px;align-items:stretch;min-height:45px;border-bottom:1px solid #565056}.stepper button{border:0;background:#f8f2f8;font-size:21px;color:#61205a}.stepper button:disabled{opacity:.42;cursor:default}.stepper input{width:100%;min-width:0;border:0;background:#fff;text-align:center;appearance:textfield}.stepper input::-webkit-inner-spin-button,.stepper input::-webkit-outer-spin-button{appearance:none}.flexible{display:flex;align-items:flex-start;gap:7px;color:var(--muted);font-size:13px;margin-top:8px}.flexible input{margin:4px 0 0;accent-color:var(--accent)}.primary{background:var(--gradient);border:0;color:#fff;border-radius:6px;min-height:53px;padding:13px 20px;font:400 17px var(--heading);text-transform:uppercase}.primary:hover{filter:brightness(.92)}.demo-note{color:var(--muted);font-size:13px;margin-top:-10px}
+.summary{background:var(--night);color:#fff;border-top:3px solid #c53bb4;padding:clamp(20px,3vw,34px);min-width:0}.summary h3{font-size:clamp(1.55rem,2.5vw,2.15rem);margin:8px 0 17px}.summary dl{display:grid;gap:0}.summary dl div{display:grid;grid-template-columns:84px minmax(0,1fr);gap:10px;padding:9px 0;border-top:1px solid #403943}.summary dt{color:#c4bbc5;font-size:14px}.summary dd{overflow-wrap:anywhere}.summary .stage{margin-top:14px;color:#d9d0dc;font-size:14px}.footer{border-top:1px solid var(--line);padding:17px 0 25px;color:var(--muted);font-size:14px}.footer a{text-underline-offset:4px}
+@media(max-width:780px){.wrap{width:min(620px,calc(100% - 36px))}.hero{grid-template-columns:1fr;gap:12px;padding:20px 0 23px}.hero-copy{padding:4px 0 7px}.photo{min-height:0;aspect-ratio:2.05}.booking{padding:28px 0 35px}.booking-grid{grid-template-columns:1fr;margin-top:22px;gap:23px}.summary{min-height:0}}
+@media(max-width:390px){.wrap{width:calc(100% - 28px)}.wordmark span,.site-context>a:last-child{font-size:12px}.format-options,.pair{gap:8px}.option span{padding:8px}.stepper{grid-template-columns:32px minmax(0,1fr) 32px}.hero h1{font-size:2.35rem}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="intro">
+<div class="wrap">
+<div class="site-context">
+<a class="wordmark" href="https://emperm.ru/" aria-label="Официальный сайт кулинарной студии «ЕМ»"><b>ЕМ</b><span>Кулинарная студия · Пермь</span></a>
+<a href="https://emperm.ru/for-business">Раздел «Для бизнеса»</a>
+</div>
+<div class="hero">
+<div class="hero-copy">
+<p class="kicker">Корпоративы и тимбилдинги</p>
+<h1>Кулинарный мастер-класс<br>для вашей компании</h1>
+<p>Выберите, где хотите готовить с шефом — в кулинарной студии или на своей площадке.</p>
+</div>
+<figure class="photo">
+<img src="studio.jpg" alt="Фотография из раздела мероприятий кулинарной студии «ЕМ»" width="1200" height="800">
+<figcaption>Фото студии «ЕМ»</figcaption>
+</figure>
+</div>
+</div>
+</header>
+<main class="wrap booking" id="event-planner">
+<h2>Спланируйте мероприятие</h2>
+<p class="sub">Укажите формат, дату и число гостей. Эти детали помогут менеджеру подобрать площадку и рассчитать стоимость.</p>
+<div class="booking-grid">
+<form id="request">
+<fieldset><legend>Где проведём мастер-класс?</legend>
+<div class="format-options">
+<label class="option"><input type="radio" name="format" value="studio" checked><span><b>В студии</b><small>На кухне с шефом</small></span></label>
+<label class="option"><input type="radio" name="format" value="away"><span><b>На выезде</b><small>На вашей площадке</small></span></label>
+</div>
+</fieldset>
+<div id="studio-wrap">
+<label class="label" for="studio">Площадка в Перми</label>
+<select id="studio" class="field">
+<option value="">Помогите выбрать студию</option>
+<option>«ЕМ» · бульвар Гагарина, 67</option>
+<option>«Мастер на кухне» · ул. Луначарского, 66</option>
+</select>
+</div>
+<div id="venue-wrap" hidden>
+<label class="label" for="venue">Где пройдёт мероприятие?</label>
+<input id="venue" class="field" placeholder="Например, офис или загородный дом" maxlength="160" disabled>
+</div>
+<div class="pair">
+<div><label class="label" for="date">Желаемая дата</label>
+<input id="date" class="field" type="date" required>
+<label class="flexible"><input id="flexible" type="checkbox"> Дата пока неизвестна</label></div>
+<div><label class="label" for="guests">Число гостей</label>
+<div class="stepper"><button id="minus" type="button" aria-label="Уменьшить число гостей">−</button><input id="guests" type="number" min="1" step="1" value="10" inputmode="numeric" required><button id="plus" type="button" aria-label="Увеличить число гостей">+</button></div></div>
+</div>
+<button class="primary" type="submit">Посмотреть заявку</button>
+<p class="demo-note">Демонстрация. Данные не отправляются.</p>
+</form>
+<aside class="summary" id="summary" tabindex="-1" aria-labelledby="summary-title">
+<p class="kicker">Для менеджера</p>
+<h3 id="summary-title">Детали заявки</h3>
+<dl>
+<div><dt>Формат</dt><dd id="out-format">В студии</dd></div>
+<div><dt>Площадка</dt><dd id="out-place">Подобрать с менеджером</dd></div>
+<div><dt>Дата</dt><dd id="out-date">Ещё не выбрана</dd></div>
+<div><dt>Гости</dt><dd id="out-guests">10</dd></div>
+</dl>
+<p class="stage" id="stage" role="status">Детали обновляются по мере заполнения.</p>
+</aside>
+</div>
+</main>
+<footer class="wrap footer">Демо для раздела «Для бизнеса» · <a href="https://emperm.ru/for-business#raschet-stoimosti">Действующая форма студии</a></footer>
+<script>
+const byId = id => document.getElementById(id);
+const form = byId('request');
+const guests = byId('guests');
+const date = byId('date');
+const flexible = byId('flexible');
+const studio = byId('studio');
+const venue = byId('venue');
+const minus = byId('minus');
+const stage = byId('stage');
+const dateFormat = new Intl.DateTimeFormat('ru-RU', {dateStyle:'long'});
+const today = new Date();
+date.min = [today.getFullYear(), String(today.getMonth()+1).padStart(2,'0'), String(today.getDate()).padStart(2,'0')].join('-');
+
+function updateDetails() {
+  const away = form.elements.format.value === 'away';
+  studio.disabled = away;
+  venue.disabled = !away;
+  byId('studio-wrap').hidden = away;
+  byId('venue-wrap').hidden = !away;
+  date.disabled = flexible.checked;
+  minus.disabled = guests.valueAsNumber <= 1;
+  byId('out-format').textContent = away ? 'На выезде' : 'В студии';
+  byId('out-place').textContent = away ? venue.value.trim() || 'Уточнить площадку' : studio.value || 'Подобрать с менеджером';
+  byId('out-date').textContent = flexible.checked ? 'Согласовать с менеджером' : 'Ещё не выбрана';
+  if (!flexible.checked && date.value && date.validity.valid) {
+    const [year, month, day] = date.value.split('-').map(Number);
+    byId('out-date').textContent = dateFormat.format(new Date(year, month - 1, day));
+  }
+  byId('out-guests').textContent = guests.validity.valid ? guests.value : '—';
+  stage.textContent = 'Детали обновляются по мере заполнения.';
+}
+function adjustGuests(delta) {
+  guests.value = Math.max(1, Math.trunc(guests.valueAsNumber || 1) + delta);
+  updateDetails();
+}
+form.addEventListener('input', updateDetails);
+form.addEventListener('change', updateDetails);
+minus.addEventListener('click', () => adjustGuests(-1));
+byId('plus').addEventListener('click', () => adjustGuests(1));
+form.addEventListener('submit', event => {
+  event.preventDefault();
+  updateDetails();
+  stage.textContent = 'Предпросмотр готов. В рабочей версии эти детали пойдут менеджеру вместе с контактами.';
+  byId('summary').focus();
+});
+updateDetails();
+</script>
+</body>
+</html>
